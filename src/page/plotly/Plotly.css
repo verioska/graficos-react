@@ -1,0 +1,9 @@
+.container-grafic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container-plot{
+  margin: 50px;
+}

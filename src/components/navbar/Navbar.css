@@ -1,0 +1,61 @@
+.header {
+  position: fixed;
+  top: 0;
+  max-height: 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "logo nav";
+  padding: 4px;
+  background-color: rgba(46, 18, 68, 0.37);
+}
+.header__logo {
+  color: #040e11;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px;
+}
+.header__nav {
+  display: grid;
+  grid-area: nav;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-content: end;
+  width: 90%;
+  font-weight: 200 ;
+}
+.header__nav-element{
+  color: #040e11;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.5s;
+  text-decoration: none;
+  margin: 15px;
+}
+.header__nav a:hover {
+  transform: scale(1.1);
+}
+.header__nav-img{
+  max-width: 30px;
+  max-height: 30px;
+}
+
+@media (max-width: 700px) {
+  .header {
+    grid-template-areas: "logo burger" "nav nav";
+    width: 90vw;
+  }
+  .header__nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    background: rgb(30 31 32 / 95%);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+  }
+  .header__logo {
+    grid-area: logo;
+    width: 100%;
+    height: auto;
+  }
+}
